@@ -1,0 +1,276 @@
+[
+  {
+    "topic": "AI taking over the world!!!",
+    "questions": [
+      "I have to ask, what's the first thing that comes to mind when you hear people talking about AI potentially taking over the world, and is there a specific incident or conversation that's stuck with you about this topic?",
+      "Let's take a step back and consider the role AI is playing in your own field or industry. If you were to replace a specific task or function with an AI-powered solution tomorrow, what would that look like, and how do you think your work habits or creative approach would need to adapt to make up for the loss of that task?",
+      "You mentioned being worried about AI replacing your work, but you also work with AI every day. If a highly advanced AI system, like an AI-powered personal assistant, suddenly became capable of handling all your core responsibilities, but still needed you to provide creative inputs and oversight, how would you envision your role evolving in that scenario?",
+      "You mention using AI for creating funny videos, which might be a form of AI-assisted creative work \u2013 can you tell me about a time when using AI tools actually helped you come up with a unique or humorous idea that might not have occurred to you otherwise?",
+      "Can you recall a time when a human colleague or collaborator struggled to adapt to an AI-driven workflow or tool in your work, and how did that impact your own understanding of the potential challenges AI might pose?"
+    ],
+    "answers": [
+      "Everybody works with AI nowadays. Nobody puts their mind to work. I am so sad about it. The AI is taking our jobs!!!",
+      "I dont want to replace my work with AI. Im worried about it!!!",
+      "I dont use AI at all. Only for creating funny videos",
+      "Please just end the interview...",
+      "no"
+    ],
+    "summary": {
+      "summary": "Here's a summary of the interview answers, highlighting key points and sentiment:\n\n**Interviewee 1**\n- **Key point:** AI is taking over jobs and people are no longer putting their minds to work.\n- **Sentiment:** Negative (expresses sadness and concern about the impact of AI on employment).\n\n**Interviewee 2**\n- **Key points:** Resists the replacement of work with AI, expresses fear about the potential consequences.\n- **Sentiment:** Negative (is worried about the impact of AI on their job).\n\n**Interviewee 3**\n- **Key point:** Uses AI for limited purposes (creating funny videos), while avoiding other applications.\n- **Sentiment:** Mixed, but leans towards being uninterested in the interview and possibly even dismissive of AI's wider impact.\n\n**Interviewee 4**\n- **Key point:** Abruptly ends the interview, refusing to answer further questions.\n- **Sentiment:** Angry or frustrated, but also somewhat passive, as they don't explicitly state their concerns about AI.",
+      "sentiment": {
+        "error": "Invalid AI response"
+      }
+    }
+  },
+  {
+    "topic": "laptop problems",
+    "questions": [
+      "We've all been there - stuck in front of a dead laptop with a deadline looming. Can you tell me about the most frustrating laptop problem you've ever encountered, and how it affected your daily life?",
+      "It sounds like we're right in the middle of a current problem, can you walk me through what's happening with your laptop right now?",
+      "That can be really frustrating when a crucial tool is suddenly out of reach. Have you checked your Wi-Fi settings or tried another network to see if it's an issue with the internet connection itself or just your laptop's ability to connect?",
+      "That's really puzzling, you're saying the issue is occurring down in the bar? Have you tried to replicate the issue in a more controlled environment to see if it's related to a specific location or surrounding interference?",
+      "It's okay, not knowing is a common starting point.\n\nCan you think back to the last time your laptop worked perfectly, do you recall any changes or actions that might have inadvertently caused the current issue?"
+    ],
+    "answers": [
+      "i have a problem right now. I dont know how to approach it",
+      "i cant connect to the internet",
+      "its my laptop i have some issue down in the bar",
+      "i dont know",
+      "yesterday it worked perfectly fine"
+    ],
+    "summary": {
+      "summary": "**Summary and Key Points:**\n\n- The interviewee is experiencing a problem with their laptop's internet connection.\n- The issue occurs only on their laptop, as they have internet at the bar.\n- The laptop used to work fine the previous day.\n- The interviewee feels uncertain about how to approach the problem, as indicated by phrases \"I dont know how to approach it\" and \"I dont know\".\n\n**Sentiment:**\n- The sentiment is one of frustration, uncertainty, and possibly a slight sense of helplessness. The interviewee appears overwhelmed by the situation and is hesitant to take steps to resolve the issue.",
+      "sentiment": {
+        "positive": {
+          "percentage": 0,
+          "keywords": []
+        },
+        "neutral": {
+          "percentage": 0,
+          "keywords": []
+        },
+        "negative": {
+          "percentage": 100,
+          "keywords": [
+            "problem",
+            "issue",
+            "cant",
+            "dont",
+            "know"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "topic": "Gabi my brother",
+    "questions": [
+      "Can you tell me a little bit about your brother Gabi and what makes him special to you?",
+      "It's clear that the dynamic between you and your brother is quite challenging right now.\n\nCan you think of any specific triggers or situations that might contribute to his anger towards you?",
+      "Wow, admitting to bullying your brother is a huge step and shows a lot of self-awareness, can you tell me more about what you feel drives you to take these actions?",
+      "That's a really insightful connection, it sounds like you're drawing a parallel between how you've been mistreated and how you're treating your brother.\n\nCan you tell me more about how that realization is making you think about breaking the cycle of bullying in your own behavior?",
+      "It's completely okay to ask for help, and I'm here to support you in exploring this further.\n\nWhat specific areas of breaking this cycle of bullying would you like to start working on?"
+    ],
+    "answers": [
+      "he s angry at me all the time..",
+      "i bully him a lot",
+      "because im a bully myself i dont bully just him",
+      "i need some help",
+      "working on myself"
+    ],
+    "summary": {
+      "summary": "**Summary and Analysis of Interview Answers:**\n\nThe interviewee shares their emotions and actions towards someone in their life, specifically expressing a sense of anger and bullying behavior. Here are the key points and sentiment of their answers:\n\n**Key Points:**\n\n1. The interviewee admits to feeling angry at someone in their life on a regular basis.\n2. They acknowledge bullying this person, which they attribute to their own inherent bullying nature.\n3. They clarify that they only bully this one person, implying that they may not exhibit this behavior towards others.\n4. The interviewee expresses a need for help, specifically mentioning a desire to work on themselves.\n\n**Sentiment:**\n\n* The interviewee's tone appears to be **reflective and vulnerable**, as they acknowledge their negative emotions and actions. This suggests a willingness to confront and address their behavior.\n* The interviewee also appears to be **self-aware**, recognizing their need for help and expressing a desire to work on themselves.\n* However, the interviewee's admission of bullying behavior is also **somewhat defensive**, as they attempt to justify their actions by attributing them to their own inherent nature. This may indicate a lack of accountability or a need for further self-reflection.\n\n**Implications:**\n\nThe interviewee's answers suggest a complex emotional landscape, marked by anger and a history of bullying. Their willingness to seek help and work on themselves is a positive indicator of growth and change. However, their defensive justifications may indicate a need for further exploration and self-reflection to fully address their behavior.",
+      "sentiment": {
+        "positive": {
+          "percentage": 17,
+          "keywords": [
+            "help",
+            "myself"
+          ]
+        },
+        "neutral": {
+          "percentage": 17,
+          "keywords": []
+        },
+        "negative": {
+          "percentage": 66,
+          "keywords": [
+            "angry",
+            "bully",
+            "bully",
+            "bullied"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "topic": "hand cream",
+    "questions": [
+      "I'm curious about hand creams that you swear by - is there a specific type that you've always come back to because it works so well for your dry hands, or do you have a favorite brand that's a game-changer for you?",
+      "That's a great choice, given aloe vera's natural moisturizing properties.\n\nHow do you find the aloe vera hand cream holding up in cold, dry weather compared to milder climates?",
+      "That's really interesting, given you're experiencing smoother hands. Have you found that this improved skin condition has helped with everyday activities like gardening or cooking, where moisture is really put to the test?",
+      "That's adorable that your girlfriend notices the difference.\n\nDoes her compliment mean you feel more confident when doing activities with her, and does that confidence rub off into other areas of your daily life?",
+      "It's lovely to hear that moisturized hands make you feel so positive about yourself, both personally and when interacting with others. How do you think this confidence translates to other self-care areas, such as face or body moisturizing or even taking care of your overall well-being?"
+    ],
+    "answers": [
+      "i like aloe vera hand cream",
+      "its just making my hands smoother",
+      "im holding my girlfriend hand and she compliments me everytime",
+      "yes and thats why moisturised hands is so nice",
+      "i dont know"
+    ],
+    "summary": {
+      "summary": "**Summary:**\n\nThe interviewee is answering questions about why they like aloe vera hand cream. They mention that it makes their hands smoother and provides a positive benefit for them.\n\n**Key Points:**\n\n1. They find aloe vera hand cream effective in making their hands smoother.\n2. They have a personal benefit of using the hand cream when holding their girlfriend's hand, as she compliments them.\n\n**Sentiment:**\n\nOverall sentiment is positive, with the interviewee expressing satisfaction and pleasure with the hand cream's effectiveness. They appreciate the compliments they receive from their girlfriend and seem to enjoy the feeling of soft hands.",
+      "sentiment": {
+        "positive": {
+          "percentage": 80,
+          "keywords": [
+            "aloe",
+            "vera",
+            "smoother",
+            "compliments",
+            "moisturised"
+          ]
+        },
+        "neutral": {
+          "percentage": 10,
+          "keywords": [
+            "i",
+            "hand",
+            "creme",
+            "why"
+          ]
+        },
+        "negative": {
+          "percentage": 10,
+          "keywords": []
+        }
+      }
+    }
+  },
+  {
+    "topic": "ukraine war with russia",
+    "questions": [
+      "I'd love to hear about your perspective on the situation, but before we dive in, can you tell me a personal story or memory that's stuck with you about the Ukraine war, something that's made a lasting impact on how you see the conflict?",
+      "That's a powerful sentiment, it's concerning that many people seem to be losing interest in the conflict. Do you think that's because the news has become too frequent or because people are starting to feel a sense of hopelessness, and if so, how do you think that impacts the global response to the crisis?",
+      "That's a complex feeling to have, frustration often comes with a sense of powerlessness. \n\nHow do you think people's frustration with the situation translates into tangible action or advocacy, given that simply wanting someone like Putin dead may not be a sustainable or effective solution?",
+      "It's great that you want to contribute to the situation despite feeling unsure about how.\n\nCan you tell me, what do you think about the people in Ukraine who may not have the luxury of feeling frustrated or helpless, yet are still finding ways to survive and advocate for their cause?",
+      "That's a beautiful sentiment, to see the resilience of the Ukrainian people as a source of strength and inspiration. Can you tell me what do you think it is about their determination and survival that resonates with you, and how do you think it could impact the international community's engagement with this crisis?"
+    ],
+    "answers": [
+      "i see the news all the time and it makes me sad, very sad. People are ignoring it after 2 years of war...",
+      "because the news are getting too frequent and people are getting sick of them. Instead of helping they are just frustrated and want putin dead",
+      "i dont know but people should help by donating or at least watch the news and tell others to help",
+      "they are very powerful and im happy that they re still standing",
+      "im unsure"
+    ],
+    "summary": {
+      "summary": "Based on the interview answers, here is a summary of the key points and sentiment:\n\n**Sentiment:** Overall, the sentiment of the interview is one of sadness, concern, and frustration about the ongoing war and its impact on people's lives.\n\n**Key Points:**\n\n1. The interviewee is emotionally disturbed by the news of war and feels that people are becoming desensitized to it.\n2. The frequency of news is contributing to people's frustration, leading to a desire for revenge (e.g., \"putin dead\") rather than taking constructive action.\n3. The interviewee suggests that people should help by donating or simply spreading awareness about the situation.\n4. There is some positivity expressed towards a specific group ( possibly the Russian opposition or dissidents) that have managed to \"still stand\" despite the challenges.\n\n**Concerns and Ideas for Improvement:**\n\n* The interviewee is concerned about people's emotional numbness to the situation and wants them to be more informed and engaged.\n* They recognize that people need to take concrete actions (donating or spreading awareness) to make a difference.\n* The mention of a specific group that is \"still standing\" suggests a desire for hope and resilience in the face of adversity.\n\n**Uncertainty:**\n\n* The interviewee is unsure about how to address the situation or how to make a positive impact.\n\nOverall, the interview highlights the emotional toll of the war on people and the need for constructive action to address the situation.",
+      "sentiment": {
+        "positive": {
+          "percentage": 20,
+          "keywords": [
+            "happy",
+            "standing"
+          ]
+        },
+        "neutral": {
+          "percentage": 40,
+          "keywords": [
+            "news",
+            "helping"
+          ]
+        },
+        "negative": {
+          "percentage": 40,
+          "keywords": [
+            "sad",
+            "Putin",
+            "frustrated",
+            "war"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "topic": "lack of IT jobs",
+    "questions": [
+      "When it comes to your own career path in the IT field, have you ever found yourself competing for job openings, and were there any especially challenging situations where you struggled to secure a role, or felt like the job market outpaced your own skills and abilities?",
+      "I'm a bit puzzled by your confidence in having all the necessary skills, given the current state of the job market and rapid industry evolution. \n\nCan you walk me through your process for staying up-to-date with the latest technologies and trends, and how you think these keep your skillset current and relevant?",
+      "That's a candid admission, I appreciate your honesty. You mentioned needing help, but what specific areas do you feel are lacking in your current skillset, and how do you think that impacts your job search?",
+      "It sounds like we've touched a nerve and the conversation has become emotionally challenging.\n\nCan you help me understand what's behind your emotional response, and is it related to feelings of frustration or disappointment with your current job search, or something more?",
+      "It seems like you've opened up about a sensitive topic, which takes a lot of courage. What specifically triggers these feelings of frustration or disappointment when you see others succeed in their job searches?"
+    ],
+    "answers": [
+      "i have all the skills needed for jobs",
+      "i need help",
+      "i m crying",
+      "yes",
+      "yes"
+    ],
+    "summary": {
+      "summary": "Based on the provided interview answers, it appears the person is struggling. Here's a summary of key points and sentiment:\n\n1. **Confidence and skills**: Initially, they express confidence about having the necessary skills for a job (i.e., \"i have all the skills needed for jobs\"). \n2. **Request for help**: However, they quickly reveal a need for assistance, highlighting their underlying uncertainty or lack of confidence (i.e., \"i need help\").\n3. **Emotional distress**: The mention of being \"crying\" (\"i m crying\") indicates that they may be emotionally unwell or overwhelmed, which could be impacting their job preparation or performance.\n4. **Acknowledgment of issues**: The positive (\"yes\" twice) responses at the end may suggest acknowledgment of their problems or a willingness to address them, but the context is unclear.\n\nSentiment: The overall sentiment of these answers appears to be one of distress, self-doubt, and a need for support. It's unclear whether these feelings are related to the job interview or more general issues.",
+      "sentiment": {
+        "positive": {
+          "percentage": 60,
+          "keywords": [
+            "needed",
+            "skills",
+            "yes",
+            "yes"
+          ]
+        },
+        "neutral": {
+          "percentage": 20,
+          "keywords": []
+        },
+        "negative": {
+          "percentage": 20,
+          "keywords": [
+            "help",
+            "crying"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "topic": "living in ukraine",
+    "questions": [
+      "What was one of the most memorable experiences you've had living in Ukraine, and how did it shape your understanding of local culture and traditions?",
+      "That's quite a surprising response, considering you've lived in Ukraine - perhaps we're starting from a different point. Can you help me understand what's behind your difficulty in recalling a memorable experience?",
+      "It seems like we've hit a pause in the conversation.\n\nIs your hesitation in recalling a memorable experience perhaps related to a recent event or a change in your life that's affecting your perception of your time in Ukraine?",
+      "It seems we've got ourselves a bit of a pause in our conversation. Could you be experiencing some kind of emotional block or discomfort related to your time in Ukraine that's making it difficult to recall a particular experience?",
+      "You seem to be taking a moment to collect your thoughts. Is this pause related to a particular aspect of your life in Ukraine that you're hesitant to revisit?"
+    ],
+    "answers": [
+      "i dont know",
+      "wait",
+      "wait",
+      "wait",
+      "wait"
+    ],
+    "summary": {
+      "summary": "This response does not appear to be a typical interview answer and seems to lack a clear point or sentiment. Based on the provided text, it can be inferred that the interviewee is struggling to respond to the question or seems uncertain about what to say.\n\nKey points:\n- Lack of knowledge or understanding of the question.\n- Uncertainty or hesitation in responding to the question.\n\nSentiment:\n- Neutral/Ambiguous (due to the vague nature of the response)\n- Possibly negative (indicating a lack of preparation or difficulty answering the question)",
+      "sentiment": {
+        "positive": {
+          "percentage": 0,
+          "keywords": []
+        },
+        "neutral": {
+          "percentage": 0,
+          "keywords": []
+        },
+        "negative": {
+          "percentage": 100,
+          "keywords": [
+            "dont",
+            "know"
+          ]
+        }
+      }
+    }
+  }
+]
