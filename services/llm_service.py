@@ -1,6 +1,15 @@
 import os
+
+import nltk
 from dotenv import load_dotenv
 from groq import Groq
+from keybert import KeyBERT
+from nltk.sentiment import SentimentIntensityAnalyzer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
+model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
 
 load_dotenv()
 
@@ -8,6 +17,16 @@ API_KEY = os.getenv("GROQ_API_KEY")
 if not API_KEY:
     raise ValueError("GROQ_API_KEY not set in environment")
 client = Groq(api_key=API_KEY)
+
+
+classifier = pipeline(
+    "sentiment-analysis",
+    model=model,
+    tokenizer=tokenizer,
+    return_all_scores=True
+)
+
+keyword_extraction_model = KeyBERT('all-MiniLM-L6-v2')
 
 
 def call_groq(prompt):
@@ -40,13 +59,12 @@ def generate_next_question(topic, previous_answers, previous_questions=None):
 
             "Your job:\n"
             " 1. Start with a brief, natural reaction to what the user said (1 sentence max)\n"
-            "2. Then ask ONE follow-up question\n\n"
+            "2. Then ask one follow-up question\n"
 
-            "The follow-up question should:\n"
-            "- Go deeper into the 'why' or 'how'\n"
-
-            "- OR connect their experience to real-world situations\n"
-            "- OR gently challenge or expand their perspective\n\n"
+            "The follow-up question should:"
+            "-GO DEEPER into the 'why' or 'how'"
+            "- OR connect their experience to real-world situations"
+            "-OR gently challenge or expand their perspective"
 
             "Rules:\n"
             "- Do NOT repeat previous questions\n"
@@ -55,8 +73,7 @@ def generate_next_question(topic, previous_answers, previous_questions=None):
             "- Keep it natural and conversational\n"
             "- Keep total response short (2 sentences max)\n"
             "- Output ONLY the reaction + question (no explanations)\n\n"
-
-            "Example format:\n"
+            "Example format:"
             "That’s really interesting, especially how you approached that. How did that experience influence your perspective on this topic?"
         )
     return call_groq(prompt)
@@ -72,29 +89,45 @@ def generate_summary(answers):
 
 
 def analyze_sentiment(answers):
-    combined = "\n".join(answers)
+    full_text = " ".join(answers)
+    truncated_text = " ".join(full_text.split()[:400])
 
-    prompt = (
-            "You are an AI that analyzes interview responses.\n\n"
-            "Analyze sentiment of the following answers and extract keywords.\n\n"
-            "Return ONLY valid JSON. STRICTLY follow this format:\n"
-            "{\n"
-            '  "positive": { "percentage": 0, "keywords": [] },\n'
-            '  "neutral": { "percentage": 0, "keywords": [] },\n'
-            '  "negative": { "percentage": 0, "keywords": [] }\n'
-            "}\n\n"
-            "Rules:\n"
-            "- Percentages must be integers\n"
-            "- Percentages must sum to 100\n"
-            "- Keywords must be short words (1-2 words) from the answers\n"
-            "- No explanations, no extra text, output only JSON\n\n"
-            "Answers:\n"
-            + combined
+    full_result = classifier(truncated_text)[0]
+    scores = {item['label']: item['score'] for item in full_result}
+
+    neg_pct = round(scores.get('LABEL_0', 0) * 100, 2)
+    neu_pct = round(scores.get('LABEL_1', 0) * 100, 2)
+    pos_pct = round(scores.get('LABEL_2', 0) * 100, 2)
+
+    keywords = keyword_extraction_model.extract_keywords(
+        full_text,
+        stop_words='english',
+        keyphrase_ngram_range=(1, 1),
+        top_n=50
     )
 
-    result = call_groq(prompt)
+    pos_words = []
+    neg_words = []
+    neu_words = []
 
-    result = result.strip()
-    if result.startswith("```"):
-        result = result.split("```")[1].strip()
-    return result
+    for word, relevance_score in keywords:
+        word = word.lower().strip()
+
+        result = classifier(word)[0]
+        word_scores = {item['label']: item['score'] for item in result}
+
+        best_label = max(word_scores, key=word_scores.get)
+        best_score = word_scores[best_label]
+
+        if best_label == 'LABEL_2' and best_score >= 0.6:
+            pos_words.append(word)
+        elif best_label == 'LABEL_0' and best_score >= 0.6:
+            neg_words.append(word)
+        else:
+            neu_words.append(word)
+
+    return {
+        "positive": {"percentage": pos_pct, "keywords": pos_words[:8]},
+        "neutral":  {"percentage": neu_pct, "keywords": neu_words[:8]},
+        "negative": {"percentage": neg_pct, "keywords": neg_words[:8]},
+    }
