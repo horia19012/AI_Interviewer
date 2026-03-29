@@ -4,10 +4,8 @@ python-dotenv==1.0.1
 httpx==0.27.0
 groq==0.5.0
 keybert
-transformers==4.41.2
-torch==2.2.0
-accelerate==0.30.1
-sentencepiece==0.1.99
-numpy==1.26.2
-nltk==3.8.1
+transformers
+torch
+numpy
+nltk
 vaderSentiment==3.3.2
