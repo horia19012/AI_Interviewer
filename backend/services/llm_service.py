@@ -7,9 +7,7 @@ from keybert import KeyBERT
 from nltk.sentiment import SentimentIntensityAnalyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
-
-tokenizer = AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
-model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
+import re
 
 load_dotenv()
 
@@ -18,15 +16,18 @@ if not API_KEY:
     raise ValueError("GROQ_API_KEY not set in environment")
 client = Groq(api_key=API_KEY)
 
-
 classifier = pipeline(
     "sentiment-analysis",
-    model=model,
-    tokenizer=tokenizer,
-    return_all_scores=True
+    model="cardiffnlp/twitter-roberta-base-sentiment-latest",
+    top_k=None
 )
 
 keyword_extraction_model = KeyBERT('all-MiniLM-L6-v2')
+
+nltk.download('vader_lexicon')
+nltk.download('punkt')
+
+vader = SentimentIntensityAnalyzer()
 
 
 def call_groq(prompt):
@@ -55,7 +56,6 @@ def generate_next_question(topic, previous_answers, previous_questions=None):
         prompt = (
             f"You are a professional interviewer conducting a thoughtful conversation about '{topic}'.\n"
             f"Conversation so far:\n{conversation_history}\n"
-            f"The user just said:\n\"{last_answer}\"\n\n"
 
             "Your job:\n"
             " 1. Start with a brief, natural reaction to what the user said (1 sentence max)\n"
@@ -88,46 +88,65 @@ def generate_summary(answers):
     return call_groq(prompt)
 
 
+def score_keywords(keywords, dominant, vader):
+    pos, neg, neu = [], [], []
+    for kw, _ in keywords:
+        score = vader.polarity_scores(kw)['compound']
+        if dominant == 'positive' and score >= 0.05:
+            pos.append(kw)
+        elif dominant == 'negative' and score <= -0.05:
+            neg.append(kw)
+        elif dominant == 'neutral' and -0.05 < score < 0.05:
+            neu.append(kw)
+    return pos, neg, neu
+
+
 def analyze_sentiment(answers):
     full_text = " ".join(answers)
-    truncated_text = " ".join(full_text.split()[:400])
 
-    full_result = classifier(truncated_text)[0]
-    scores = {item['label']: item['score'] for item in full_result}
+    ideas = [idea.strip() for idea in re.split(r'[.,]', full_text) if idea.strip()]
 
-    neg_pct = round(scores.get('LABEL_0', 0) * 100, 2)
-    neu_pct = round(scores.get('LABEL_1', 0) * 100, 2)
-    pos_pct = round(scores.get('LABEL_2', 0) * 100, 2)
+    if not ideas:
+        return {"positive": {"percentage": 0, "keywords": []},
+                "negative": {"percentage": 0, "keywords": []},
+                "neutral":  {"percentage": 0, "keywords": []}}
 
-    keywords = keyword_extraction_model.extract_keywords(
-        full_text,
-        stop_words='english',
-        keyphrase_ngram_range=(1, 1),
-        top_n=50
-    )
+    total_pos, total_neg, total_neu = 0, 0, 0
+    pos_words, neg_words, neu_words = [], [], []
 
-    pos_words = []
-    neg_words = []
-    neu_words = []
+    for idea in ideas:
+        scores = {item['label'].lower(): item['score'] for item in classifier(idea, top_k=None)}
 
-    for word, relevance_score in keywords:
-        word = word.lower().strip()
+        total_pos += scores.get('positive', 0)
+        total_neg += scores.get('negative', 0)
+        total_neu += scores.get('neutral', 0)
 
-        result = classifier(word)[0]
-        word_scores = {item['label']: item['score'] for item in result}
+        dominant = max(scores, key=scores.get)
 
-        best_label = max(word_scores, key=word_scores.get)
-        best_score = word_scores[best_label]
+        keywords = keyword_extraction_model.extract_keywords(
+            idea,
+            stop_words='english',
+            keyphrase_ngram_range=(1, 1),
+            top_n=10
+        )
 
-        if best_label == 'LABEL_2' and best_score >= 0.6:
-            pos_words.append(word)
-        elif best_label == 'LABEL_0' and best_score >= 0.6:
-            neg_words.append(word)
-        else:
-            neu_words.append(word)
+        p, n, ne = score_keywords(keywords, dominant, vader)
+        pos_words.extend(p)
+        neg_words.extend(n)
+        neu_words.extend(ne)
+
+    num_ideas = len(ideas)
+
+    pos_pct = round((total_pos / num_ideas) * 100, 2)
+    neg_pct = round((total_neg / num_ideas) * 100, 2)
+    neu_pct = round((total_neu / num_ideas) * 100, 2)
+
+    pos_words = list(dict.fromkeys(pos_words))
+    neg_words = list(dict.fromkeys(neg_words))
+    neu_words = list(dict.fromkeys(neu_words))
 
     return {
-        "positive": {"percentage": pos_pct, "keywords": pos_words[:8]},
-        "neutral":  {"percentage": neu_pct, "keywords": neu_words[:8]},
-        "negative": {"percentage": neg_pct, "keywords": neg_words[:8]},
+        "positive": {"percentage": pos_pct, "keywords": pos_words[:20]},
+        "negative": {"percentage": neg_pct, "keywords": neg_words[:20]},
+        "neutral":  {"percentage": neu_pct, "keywords": neu_words[:20]},
     }

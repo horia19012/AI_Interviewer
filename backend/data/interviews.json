@@ -1,0 +1,69 @@
+[
+  {
+    "topic": "AI in tech",
+    "questions": [
+      "How do you think AI has impacted your own life, and do you think there was a particular moment or experience where you first started to notice the effects of AI on your daily routine and interactions?",
+      "That's fascinating, how you've seen the boundaries between math and meaning blur with AI.\n\nCan you talk more about what you think happens when the gap between what AI can do and what people think it can do starts to close \u2013 do you see this as a threat to the human element or an opportunity for collaboration?",
+      "That's a sobering outlook, highlighting the impact on human careers.\n\nCan you elaborate on how we can better prepare and support workers in transitioning to new roles or industries, or would you argue that this is an unavoidable consequence of AI adoption?",
+      "That's a profound insight into the human cost of AI adoption - it's striking that you've seen so many talented individuals quietly burning out, not because the work got harder, but because it stopped feeling valued.\n\nCan you speak to how companies and organizations can recognize and mitigate this morale issue, beyond just retraining or upskilling their employees to compete with AI?"
+    ],
+    "answers": [
+      "I first started exploring AI seriously when I noticed how rapidly the field was shifting from narrow rule-based systems to models that could genuinely generalize. What sparked my interest wasn't one moment but rather the realization that language and reasoning \u2014 things we considered uniquely human \u2014 were starting to emerge from statistical patterns at scale. That tension between \"it's just math\" and \"it's producing something meaningful\" is what pulled me in and kept me there. In practice, the most exciting part has always been the gap between what a model can do and what people think it can do \u2014 that gap is where the interesting work lives.",
+      "Honestly, it's going to hurt more than most people admit. The creative fields that felt \"safe\" because they required taste and intuition are finding out that good enough, fast, and cheap beats exceptional but slow for most clients. Junior roles are disappearing before people even get the chance to develop into seniors. The optimists say new tools create new opportunities \u2014 and they do \u2014 but not for everyone, and not equally. Some people just get displaced quietly and that part doesn't make the headlines.",
+      "The career ladder is just breaking. Juniors used to learn by doing the boring, repetitive work \u2014 the stock illustrations, the filler copy, the basic edits. That work is gone now, so they never build the foundation that eventually makes someone a great senior. You can't skip straight to creative direction without years of bad work behind you. For people mid-career it's a different kind of damage \u2014 they're good at what they do but suddenly their output is being compared to AI that works for free. That's not a skills problem, it's a morale problem. A lot of talented people are quietly burning out not because the work got harder but because it stopped feeling valued. The satisfaction piece is real and undertalked. Creative work was always tied to identity. When the thing you spent years mastering becomes a prompt, that hits differently than a factory job being automated. It's personal.",
+      "Most companies won't do any of it. They'll run a few workshops, post something on LinkedIn about \"humans and AI working together,\" and keep quietly shrinking headcount. The ones genuinely restructuring around human judgment are the exception, not the rule. For most organizations the morale issue just gets managed until the people causing it leave, and then it's no longer a problem they have to solve."
+    ],
+    "summary": {
+      "summary": "**Summary and Key Points:**\n\nThe interviewee discusses their interest in AI, highlighting the tension between \"it's just math\" and \"it's producing something meaningful.\" They emphasize that the gap between what AI can do and what people think it can do is where the interesting work lives.\n\nHowever, they also warn that AI's impact on the creative industry will be more hurtful than many people admit. The increasing use of AI will displace junior roles and disrupt the career ladder, making it difficult for people to learn by doing the \"boring, repetitive work\" that was once the foundation of creative careers.\n\nThe interviewee emphasizes that AI poses a morale problem, as many talented people are quietly burning out because their work doesn't feel valued. They note that this is particularly personal for creative professionals, whose skills are now being compared to AI-generated content.\n\n**Key Points:**\n\n* The gap between AI's capabilities and human perception is where interesting work lives.\n* AI will have a more significant impact on the creative industry than people anticipate.\n* Junior roles will disappear, making it challenging for people to develop and learn.\n* The career ladder is broken, and people are being displaced quietly.\n* AI poses a morale problem, particularly for creative professionals.\n* Many companies are not restructuring around human judgment and will quietly shrink headcount.\n\n**Sentiment:**\n\nThe overall sentiment of the interviewee is cautious and pessimistic. They emphasize that AI's impact will be hurtful and displace many careers, particularly in the creative industry. They also express frustration that companies are not taking the necessary steps to address the morale issue, and are instead managing the problem by letting talented people leave.",
+      "sentiment": {
+        "positive": {
+          "percentage": 15.84,
+          "keywords": [
+            "exciting",
+            "interesting",
+            "optimists",
+            "opportunities",
+            "create",
+            "satisfaction"
+          ]
+        },
+        "negative": {
+          "percentage": 34.91,
+          "keywords": [
+            "hurt",
+            "bad",
+            "damage",
+            "problem",
+            "stopped",
+            "leave"
+          ]
+        },
+        "neutral": {
+          "percentage": 49.25,
+          "keywords": [
+            "ai",
+            "generalize",
+            "models",
+            "systems",
+            "exploring",
+            "narrow",
+            "rule",
+            "based",
+            "shifting",
+            "field",
+            "language",
+            "patterns",
+            "realization",
+            "statistical",
+            "uniquely",
+            "human",
+            "reasoning",
+            "moment",
+            "emerge",
+            "scale"
+          ]
+        }
+      }
+    }
+  }
+]
